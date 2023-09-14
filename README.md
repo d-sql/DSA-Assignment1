@@ -1,16 +1,16 @@
 # Assignment 1
-Course Title: Distributed Systems and Applications
-Course Code: DSA612S
-Assessment: First Assignment
-Released on: 30/08/2023.
-**Due date: 22/09/ 2023 at midnight**
-Total Marks: 100
+- Course Title: Distributed Systems and Applications
+- Course Code: DSA612S
+- Assessment: First Assignment
+- Released on: 30/08/2023.
+- **Due date: 22/09/ 2023 at midnight**
+- Total Marks: 100
 
 # Group Members:
-220129223 - Profiliu I.M Nandjebo
-220057478 - Xamira Hangara
-222029412 - Sigridus Amwaalwa
-221020969 - Azor Hijarunguru
+- 220129223 - Profiliu I.M Nandjebo
+- 220057478 - Xamira Hangara
+- 222029412 - Sigridus Amwaalwa
+- 221020969 - Azor Hijarunguru
 
 # Submission Instructions:
 - This assignment is to be completed by groups of four students each.
