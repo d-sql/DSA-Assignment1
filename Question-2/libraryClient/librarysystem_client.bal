@@ -3,11 +3,11 @@ import ballerina/io;
 LibrarySystemClient ep = check new ("http://localhost:9090");
 
 public function main() returns error? {
-    book add_bookRequest = {ISBN: "ballerina", name: "ballerina", authors: [{first_name: "ballerina", middle_name: "ballerina", last_name: "ballerina"}], publisher: "ballerina", genre: "ballerina", year_published: 1, edition: 1, status: "AVAILABLE"};
+    book add_bookRequest = {ISBN: "ballerina", name: "ballerina", authors: [{first_name: "ballerina", middle_name: "ballerina", last_name: "ballerina"}], publisher: "ballerina", genre: "ballerina", year_published: 1, edition: 1, status: "AVAILABLE", book_location: {section: "ballerina", aisle: 1, floor: 1}};
     string add_bookResponse = check ep->add_book(add_bookRequest);
     io:println(add_bookResponse);
 
-    book update_bookRequest = {ISBN: "ballerina", name: "ballerina", authors: [{first_name: "ballerina", middle_name: "ballerina", last_name: "ballerina"}], publisher: "ballerina", genre: "ballerina", year_published: 1, edition: 1, status: "AVAILABLE"};
+    book update_bookRequest = {ISBN: "ballerina", name: "ballerina", authors: [{first_name: "ballerina", middle_name: "ballerina", last_name: "ballerina"}], publisher: "ballerina", genre: "ballerina", year_published: 1, edition: 1, status: "AVAILABLE", book_location: {section: "ballerina", aisle: 1, floor: 1}};
     string update_bookResponse = check ep->update_book(update_bookRequest);
     io:println(update_bookResponse);
 
@@ -20,7 +20,7 @@ public function main() returns error? {
     io:println(return_bookResponse);
 
     string locate_bookRequest = "ballerina";
-    book locate_bookResponse = check ep->locate_book(locate_bookRequest);
+    location locate_bookResponse = check ep->locate_book(locate_bookRequest);
     io:println(locate_bookResponse);
 
     string remove_bookRequest = "ballerina";

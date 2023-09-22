@@ -21,7 +21,7 @@ service LibrarySystem {
     rpc list_available_book (google.protobuf.Empty) returns (stream book);
     rpc borrow_book (StudentRequest) returns (google.protobuf.StringValue);
     rpc return_book (StudentRequest) returns (google.protobuf.StringValue);
-    rpc locate_book (google.protobuf.StringValue) returns (book);
+    rpc locate_book (google.protobuf.StringValue) returns (location);
 
 }
 
@@ -68,6 +68,7 @@ message book {
     int32 year_published = 6;
     int32 edition = 7;
     book_status status = 8;
+    location book_location = 9;
 }
 
 enum book_status{
@@ -79,4 +80,16 @@ message author{
     string first_name = 1;
     string middle_name = 2;
     string last_name = 3;
+}
+
+message borrowed_book{
+    string id = 1;
+    string student_number = 2;
+    string ISBN = 3;
+}
+
+message location {
+    string section = 1;
+    int32 aisle = 2;
+    int32 floor = 3;
 }
