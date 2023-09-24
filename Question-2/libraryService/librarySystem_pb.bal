@@ -423,14 +423,14 @@ public type ContextUserRequest record {|
 
 @protobuf:Descriptor {value: LIBRARYSYSTEM_DESC}
 public type borrowed_book record {|
-    string id = "";
+    readonly string id = "";
     string student_number = "";
     string ISBN = "";
 |};
 
 @protobuf:Descriptor {value: LIBRARYSYSTEM_DESC}
 public type student record {|
-    string student_number = "";
+    readonly string student_number = "";
     string first_name = "";
     string last_name = "";
 |};
@@ -444,7 +444,7 @@ public type author record {|
 
 @protobuf:Descriptor {value: LIBRARYSYSTEM_DESC}
 public type book record {|
-    string ISBN = "";
+    readonly string ISBN = "";
     string name = "";
     author[] authors = [];
     string publisher = "";
@@ -457,14 +457,14 @@ public type book record {|
 
 @protobuf:Descriptor {value: LIBRARYSYSTEM_DESC}
 public type librarian record {|
-    string staff_id = "";
+    readonly string staff_id = "";
     string first_name = "";
     string last_name = "";
 |};
 
 @protobuf:Descriptor {value: LIBRARYSYSTEM_DESC}
 public type admin record {|
-    string staff_id = "";
+    readonly string staff_id = "";
     string first_name = "";
     string last_name = "";
 |};
@@ -484,8 +484,8 @@ public type location record {|
 
 @protobuf:Descriptor {value: LIBRARYSYSTEM_DESC}
 public type UserRequest record {|
-    student student = {};
-    librarian librarian = {};
+    student? student = null;
+    librarian? librarian = null;
 |};
 
 public enum book_status {
